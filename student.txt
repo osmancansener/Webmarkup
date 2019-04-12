@@ -1,0 +1,3 @@
+student name: Osman Can Sener
+student number: 633548
+student class: INF1SB 
