@@ -1,0 +1,326 @@
+/* Standard styles */
+html, body{	margin: 0;padding: 0;height: 100%;text-align: center;}
+section{min-height: 100%;}
+a{text-decoration: none;}
+li{list-style-type: none;}
+
+@font-face{src: url(fonts/Lato-Black.ttf); font-family: latoblack;}
+
+h1, h2, h3, nav{font-family: 'Arial', sans-serif; font-weight: 600; color: #AAAAAA;text-transform: uppercase;}
+h2{color: #444444;}
+h3{font-size: 40px; padding-top: 8%; margin-bottom: 5px;}
+p{font-family: latoblack, Arial, Arial Black, sans-serif; color: #707070;}
+
+
+/* Navigation */
+.headerTop{width: 100%; height: 65px; position: fixed; top: 0; left: 0; background:#FFFFFF; box-shadow: 0px 1px 3px #000000; z-index: 1;}
+#logo{width: 140px; float:left; margin: 20px 0 0 50px;}
+#logo:hover{opacity: 0.5;}
+#logo img{width: 100%;}
+
+header nav{float: right; margin: 10px 50px 0 0;}
+header nav ul li{float: left; margin-left: 16px;}
+header nav ul li:hover{margin-top: 3px; background-color:#000000;}
+header nav ul li a{font-size: 15px; color: #2699FB; padding: 12px 0;}
+
+/* Home page */
+#home{background-position: center center; background-size: cover; background-attachment:fixed; border: 1px solid #000000; }
+#home h1{margin: 240px auto 0 auto; font-size:60px;}
+#home h2{margin: 0 auto 0 auto; font-size: 25px;}
+
+/* Main page */
+#main{padding-top: 1px;background-color:#FFFFFF;}
+#main img{width: 450px;/*display: inline-block;*/}
+#main img:hover{box-shadow: 0px 1px 3px #000000;}
+#main p {width: 100%;}
+#main ul li {width: 20%; float:left;}
+
+/* Secondary page */
+#secondary {padding-top: 1px;background-color:#F5F5F5;}
+#secondary img{;width: 450px;/*display: inline-block;*/}
+#secondary img:hover{box-shadow: 0px 1px 3px #000000;}
+#secondary ul li {width: 20%; float:left;}
+.hamburger {display: none;}
+
+/* Sports page */
+#sport{padding-top: 1px;background-color:#FFFFFF;}
+/*#sport {display: flex; flex-direction: column;} ERROR W3C USING THIS CODE*/
+#sports {width:1100px; margin: 0 auto 0 auto;}
+#sports ul {padding:0px;}
+#sports ul li {width: 20%; float:left;}
+#sports img {width: 200px; height: 100px;}
+#sports img:hover {box-shadow: 0px 1px 3px #000000;}
+#video {position: fixed;right: 0;bottom: 0;min-width: 100%;min-height: 100%;z-index: -999;top: 40px;background-size: cover;}
+
+/* About page */
+#about {padding-top: 1px;background-color:#F5F5F5;}
+
+/* Contact page */
+#contact{padding-top: 1px;background-color:#FFFFFF;}
+legend{font-size: 40px;}
+form input, textarea, [name="name"], [name="email"],[name="message"]{margin :0 auto;display: block;font-family:'Arial'; margin-bottom:10px; border: 2px solid; border-color:#000000;}
+form input{width: 552px; height:30px;}
+form textarea{width: 550px; height: 200px; resize:none;}
+.input_text{color:#000000; padding-left:10px;}
+.button{background-color:#FFFFFF; color:#F5F5F5; width: 566px;}
+.button:hover{background-color:#F5F5F5; color:#000000;}
+
+/* Footer */
+#lastFooter{width: 100%; height: 70px; background-color:#000000;}
+#lastFooter p{font-size:20px; color:#FFFFFF; padding-top:30px; margin: 0;}
+
+/* FIX FOR FOOTER, BUT GIVES ERRORS ON CSS VALIDATE W3C
+#main, #secondary, #sport, #about {
+    display: flex;
+    flex-direction: column;
+}
+#main footer, #secondary footer, #sport footer, #about footer {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+*/
+
+/* Media-query 755px */
+@media screen and (max-width: 755px){
+	header nav{
+		float: initial;
+	}
+	.hamburger {
+	display: block;
+	position: relative;	
+}
+}
+
+/* Media-query 960 px */
+@media screen and (max-width: 960px){
+#logo{
+	width: 100px;
+	margin-top: 5px;
+}
+
+header nav{
+	margin-top: 0;
+}
+
+header nav ul li{
+	margin-top: 0;
+	font-size:12px;
+}
+
+#home h1{
+	font-size: 40px;
+	margin-top: 200px;
+}
+
+#home h2{
+	font-size:18px;
+}
+
+h3{
+	padding-top: 12%;
+	margin: 0;
+}
+
+#main p{
+	width: 60%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#mainImage1{
+	width:100%;
+
+}
+
+#main footer{
+	width:100%;
+}
+
+#secondary p{
+	width: 100%;
+}
+
+#secondaryImage2{
+	width:100%;
+}
+
+#sports{
+	width:auto;
+}
+
+#sports ul li{
+	width: 100%;
+	float: none;	
+}
+
+#sports ul li:last-child{
+	padding-bottom: 20%;
+}
+
+#sports img{
+	width: 45%;
+	height: auto; 
+}
+
+#main ul li{
+	width: 100%;
+	float: none;	
+}
+
+#main ul li:last-child{
+	padding-bottom: 20%;
+}
+
+#main img{
+	width: 45%;
+	height: auto; 
+}
+
+#secondary ul li{
+	width: 100%;
+	float: none;	
+}
+
+#secondary ul li:last-child{
+	padding-bottom: 20%;
+}
+
+#secondary img{
+	width: 45%;
+	height: auto; 
+}
+
+form legend, form input, form textarea{
+	width: 60%;
+}
+
+.button{
+	width: 62%;
+}#video{
+	width: 100%;
+	}
+}
+/* Media-query 399px */
+@media screen and (max-width: 399px){
+/* body{ */
+	/* margin: -55px; */
+/* } */
+
+#logo{
+	width: 60px;
+	margin-left: 25px;
+}	
+
+header nav{
+margin: 0;
+float: none;
+}
+
+#home h1{
+	font-size: 20px;
+	margin-top: 200px;
+}
+#home h2{
+	width: 100%;
+	height:auto;
+}
+
+#main img{
+	width: 260px;
+	height: 350px;
+}
+#secondary img{
+	width: 260px;
+	height: 350px;
+}
+#video{
+	height: 100%;
+	width: 100%;
+}
+
+
+}
+
+
+/* Media-query  767 px */
+@media screen and (max-width: 767px) {
+.headerTop {
+		
+	height: auto;
+
+}
+#logo {
+	margin: 0;
+	width: 40%;
+	margin-top: 10px;
+    float: left;
+}
+#logo img {
+	width: 100px;
+}
+
+#main-nav {
+	margin-right: 0;
+	margin-top: 8px;
+    width: 60%;
+    float: left;
+}
+#main-nav ul {
+	margin: 0;
+	padding: 0;
+	text-align:left;
+	display: none;
+}
+header nav ul li {
+	margin: 0;
+	float: none;
+	padding: 5px 0;
+	padding-right: 20px;
+}
+header nav ul li a {
+	padding-bottom: 8px;
+}
+header nav ul li:hover {
+	margin-top: 0;
+}
+#main-nav:hover ul {
+	display: block;
+}
+
+#home, #main, #secondary, #sport, #about, #contact {
+	padding-top: 35px;
+ }
+#main img, #secondary img, #sport img, #about img {
+	width: 90%;
+	height: 300px;
+}
+p {
+	width: 90%;
+	margin: 0 auto;
+}
+#about aside {
+	width: 90%;
+	margin: 0 auto;
+}
+form legend, form input, form textarea {
+	width: 80%;
+}
+.button {
+	width: 84%;
+	background: #000;
+	}
+    
+#main footer p, #secondary footer p, #sport footer p, #about footer p {
+	padding-bottom: 40px;
+}
+#video{
+	width: 100%;
+}
+}
+.cookieAcceptBar {position: fixed;bottom: 0;left:0;right: 0;text-align: center;background-color: #000;color: #fff;padding: 20px 0;z-index: 1;opacity: 0.5;}
+
+.cookieAcceptBar a {color: #fff;text-decoration: none;font-weight: bold;}
+
+button {cursor: pointer;border: none;background-color: #2387c0;color: #fff;text-transform: uppercase;margin-top: 10px;height: 40px;line-height: 40px;padding: 0 20px;}
